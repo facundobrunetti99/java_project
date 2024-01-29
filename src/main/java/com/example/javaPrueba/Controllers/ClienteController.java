@@ -49,19 +49,19 @@ public class ClienteController {
         int mesOp=mesActual-mesNac;
         int diaOp=diaActual-diaNac;
 
-        if(mesOp==0){
-            if(diaOp>0){
-                edadOp=añoActual-añoNac-1;
+        if(mesOp==0){/*<=0 Se ecnuentra en el mes de cumpleaños*/
+            if(diaOp>0){/*<=17 Ya fue su cumpeaños*/
+                edadOp=añoActual-añoNac;/*2024-1999=25*/
 
-            }if(diaOp==0 || diaOp<0){
-                edadOp=añoActual-añoNac;
+            }if(diaOp==0 || diaOp<0){/*se le resta 1. ((2024-1999)=25 => (25-1)=24) Todavia no cumple años*/
+                edadOp=añoActual-añoNac-1;
             }
             }if(mesOp<0){
             edadOp=añoActual-añoNac-1;
-        }if(mesOp>0){
+        }if(mesOp>0){/*<=4*/
             edadOp=añoActual-añoNac;
         }
-        cliente.setEdad(edadOp);
+        cliente.setEdad(edadOp);/*24=> Añado edadOp al cliente, donde es el resultado de la operacion*/
         clienteRepo.save(cliente);
         return "Alta realizada";
     }
