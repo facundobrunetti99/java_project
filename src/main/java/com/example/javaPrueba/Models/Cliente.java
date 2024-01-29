@@ -2,6 +2,9 @@ package com.example.javaPrueba.Models;
 import jakarta.persistence.Column;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 
 @Entity
 @Table
@@ -18,6 +21,8 @@ public class Cliente {
     private  int edad;
     @Column(name="nombre")
     private String name;
+    @Column(name="fecha_nac")
+    private LocalDate fehcanac;
 
     @OneToOne
     private Venta  venta;
@@ -25,11 +30,21 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String lastname, int edad, String name, Venta venta) {
+    public Cliente(String lastname, int edad, String name,LocalDate fehcanac, Venta venta) {
         this.lastname = lastname;
         this.edad = edad;
         this.name = name;
+        this.fehcanac=fehcanac;
         this.venta = venta;
+
+    }
+
+    public LocalDate getFehcanac() {
+        return fehcanac;
+    }
+
+    public void setFehcanac(LocalDate fehcanac) {
+        this.fehcanac = fehcanac;
     }
 
     public Venta getVenta() {
