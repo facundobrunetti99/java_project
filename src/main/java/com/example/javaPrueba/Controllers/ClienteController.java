@@ -3,10 +3,8 @@ import com.example.javaPrueba.Repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.javaPrueba.Models.Cliente;
-
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Date;
 import java.util.List;
 
 

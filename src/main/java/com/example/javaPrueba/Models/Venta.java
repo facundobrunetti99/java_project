@@ -2,8 +2,6 @@ package com.example.javaPrueba.Models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.*;
-
-
 import java.util.List;
 
 @Entity
