@@ -21,13 +21,26 @@ public class Venta {
     @JsonIgnore
     private List<Producto> productoList;
 
+
+    @ManyToOne
+    @JoinColumn(name="cliente_id")
+    private Cliente cliente;
     public Venta() {
     }
 
-    public Venta(String tipoVenta, String fecha_venta, List<Producto> productoList) {
+    public Venta(String tipoVenta, String fecha_venta, List<Producto> productoList, Cliente cliente) {
         this.tipoVenta = tipoVenta;
         this.fecha_venta = fecha_venta;
         this.productoList = productoList;
+        this.cliente = cliente;
+    }
+
+    public Cliente getCliente_id() {
+        return cliente;
+    }
+
+    public void setCliente_id(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public List<Producto> getProductoList() {

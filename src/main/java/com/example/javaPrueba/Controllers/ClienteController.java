@@ -30,7 +30,6 @@ public class ClienteController extends ServiceEdad {
         updatecliente.setEdad(cliente.getEdad());
         updatecliente.setLastname(cliente.getLastname());
         updatecliente.setName(cliente.getName());
-        updatecliente.setVenta(cliente.getVenta());
         updatecliente.setFehcanac(cliente.getFehcanac());
         return "Se realizo el cambio";
     }
