@@ -4,10 +4,7 @@ import com.example.javaPrueba.Service.ServiceEdad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.javaPrueba.Models.Cliente;
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
-
 
 @RestController
 public class ClienteController extends ServiceEdad {
