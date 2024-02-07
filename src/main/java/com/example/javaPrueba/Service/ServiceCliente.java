@@ -3,7 +3,7 @@ import com.example.javaPrueba.Models.Cliente;
 import java.time.LocalDate;
 import java.time.Month;
 
-public  class ServiceEdad extends Cliente  {
+public  class ServiceCliente extends Cliente  {
 
     public void edadPersona(Cliente cliente) {
                 int diaNac = cliente.getFehcanac().getDayOfMonth();
